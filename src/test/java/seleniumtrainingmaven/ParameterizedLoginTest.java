@@ -11,9 +11,10 @@ import org.testng.annotations.Test;
 public class ParameterizedLoginTest extends BaseTest
 {
 	@Test
-	@Parameters({"username", "password", "loginSucceeds"})
-	public void loginTest(String username, String password, Boolean loginSucceeds) 
+	@Parameters({"username", "password", "loginSucceeds", "browser"})
+	public void loginTest(String username, String password, Boolean loginSucceeds, String browser) 
 	{	
+		this.browser = browser;
 		loginPage.login(username, password);
 		
 		if (loginSucceeds)

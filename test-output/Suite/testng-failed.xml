@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="6" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="6" parallel="tests" name="LoginSuccess(failed)">
-    <parameter name="password" value="SuperSecretPassword!"/>
-    <parameter name="username" value="tomsmith"/>
-    <parameter name="loginSucceeds" value="true"/>
-    <classes>
-      <class name="seleniumtrainingmaven.ParameterizedLoginTest">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="loginTest"/>
-        </methods>
-      </class> <!-- seleniumtrainingmaven.ParameterizedLoginTest -->
-    </classes>
-  </test> <!-- LoginSuccess(failed) -->
   <test thread-count="6" parallel="tests" name="LoginFailureOnPassword(failed)">
     <parameter name="password" value="InvalidPassword!"/>
+    <parameter name="browser" value="safari"/>
     <parameter name="username" value="tomsmith"/>
     <parameter name="loginSucceeds" value="false"/>
     <classes>
@@ -43,4 +30,19 @@
       </class> <!-- seleniumtrainingmaven.ParameterizedLoginTest -->
     </classes>
   </test> <!-- LoginFailureonUsername(failed) -->
+  <test thread-count="6" parallel="tests" name="LoginSuccess(failed)">
+    <parameter name="password" value="SuperSecretPassword!"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="username" value="tomsmith"/>
+    <parameter name="loginSucceeds" value="true"/>
+    <classes>
+      <class name="seleniumtrainingmaven.ParameterizedLoginTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- seleniumtrainingmaven.ParameterizedLoginTest -->
+    </classes>
+  </test> <!-- LoginSuccess(failed) -->
 </suite> <!-- Failed suite [Suite] -->

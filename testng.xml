@@ -5,6 +5,7 @@
 		<parameter name="username" value="tomsmith"></parameter>
 		<parameter name="password" value="SuperSecretPassword!"></parameter>
 		<parameter name="loginSucceeds" value="true"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="seleniumtrainingmaven.ParameterizedLoginTest" />
 		</classes>
@@ -13,14 +14,16 @@
 		<parameter name="username" value="tomsmith"></parameter>
 		<parameter name="password" value="InvalidPassword!"></parameter>
 		<parameter name="loginSucceeds" value="false"></parameter>
+		<parameter name="browser" value="safari"></parameter>
 		<classes>
 			<class name="seleniumtrainingmaven.ParameterizedLoginTest" />
 		</classes>
 	</test>
 	<test thread-count="3" name="LoginFailureonUsername">
 		<parameter name="username" value="invaliduser"></parameter>
-		<parameter name="password" value="SuperSecretPasswor"></parameter>
+		<parameter name="password" value="SuperSecretPassword!"></parameter>
 		<parameter name="loginSucceeds" value="false"></parameter>
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="seleniumtrainingmaven.ParameterizedLoginTest" />
 		</classes>

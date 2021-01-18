@@ -104,17 +104,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumtrainingmaven.ParameterizedLoginTest" class="method navigator-link" hash-for-method="loginTest(tomsmith, SuperSecretPassword!, true)">loginTest(tomsmith, SuperSecretPassword!, true)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="seleniumtrainingmaven.ParameterizedLoginTest" class="method navigator-link" hash-for-method="loginTest(tomsmith, InvalidPassword!, false, safari)">loginTest(tomsmith, InvalidPassword!, false, safari)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumtrainingmaven.ParameterizedLoginTest" class="method navigator-link" hash-for-method="loginTest(invaliduser, SuperSecretPasswor, false)">loginTest(invaliduser, SuperSecretPasswor, false)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="seleniumtrainingmaven.ParameterizedLoginTest" class="method navigator-link" hash-for-method="loginTest(invaliduser, SuperSecretPasswor, false, chrome)">loginTest(invaliduser, SuperSecretPasswor, false, chrome)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="seleniumtrainingmaven.ParameterizedLoginTest" class="method navigator-link" hash-for-method="loginTest(tomsmith, InvalidPassword!, false)">loginTest(tomsmith, InvalidPassword!, false)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="seleniumtrainingmaven.ParameterizedLoginTest" class="method navigator-link" hash-for-method="loginTest(tomsmith, SuperSecretPassword!, true, chrome)">loginTest(tomsmith, SuperSecretPassword!, true, chrome)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -137,26 +137,26 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest(tomsmith, SuperSecretPassword!, true)">
-                  </a> <!-- loginTest(tomsmith, SuperSecretPassword!, true) -->
+                  <a name="loginTest(tomsmith, InvalidPassword!, false, safari)">
+                  </a> <!-- loginTest(tomsmith, InvalidPassword!, false, safari) -->
                   <span class="method-name">loginTest</span>
-                  <span class="parameters">(tomsmith, SuperSecretPassword!, true)</span>
+                  <span class="parameters">(tomsmith, InvalidPassword!, false, safari)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest(invaliduser, SuperSecretPasswor, false)">
-                  </a> <!-- loginTest(invaliduser, SuperSecretPasswor, false) -->
+                  <a name="loginTest(invaliduser, SuperSecretPasswor, false, chrome)">
+                  </a> <!-- loginTest(invaliduser, SuperSecretPasswor, false, chrome) -->
                   <span class="method-name">loginTest</span>
-                  <span class="parameters">(invaliduser, SuperSecretPasswor, false)</span>
+                  <span class="parameters">(invaliduser, SuperSecretPasswor, false, chrome)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="loginTest(tomsmith, InvalidPassword!, false)">
-                  </a> <!-- loginTest(tomsmith, InvalidPassword!, false) -->
+                  <a name="loginTest(tomsmith, SuperSecretPassword!, true, chrome)">
+                  </a> <!-- loginTest(tomsmith, SuperSecretPassword!, true, chrome) -->
                   <span class="method-name">loginTest</span>
-                  <span class="parameters">(tomsmith, InvalidPassword!, false)</span>
+                  <span class="parameters">(tomsmith, SuperSecretPassword!, true, chrome)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,6 +173,7 @@
 &lt;suite thread-count=&quot;6&quot; parallel=&quot;tests&quot; name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;LoginSuccess&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;SuperSecretPassword!&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;tomsmith&quot;/&gt;
     &lt;parameter name=&quot;loginSucceeds&quot; value=&quot;true&quot;/&gt;
     &lt;classes&gt;
@@ -181,6 +182,7 @@
   &lt;/test&gt; &lt;!-- LoginSuccess --&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;LoginFailureOnPassword&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;InvalidPassword!&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;safari&quot;/&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;tomsmith&quot;/&gt;
     &lt;parameter name=&quot;loginSucceeds&quot; value=&quot;false&quot;/&gt;
     &lt;classes&gt;
@@ -189,6 +191,7 @@
   &lt;/test&gt; &lt;!-- LoginFailureOnPassword --&gt;
   &lt;test thread-count=&quot;3&quot; parallel=&quot;tests&quot; name=&quot;LoginFailureonUsername&quot;&gt;
     &lt;parameter name=&quot;password&quot; value=&quot;SuperSecretPasswor&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;parameter name=&quot;username&quot; value=&quot;invaliduser&quot;/&gt;
     &lt;parameter name=&quot;loginSucceeds&quot; value=&quot;false&quot;/&gt;
     &lt;classes&gt;
@@ -242,20 +245,20 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'loginTest')
 data.setCell(0, 2, 'seleniumtrainingmaven.ParameterizedLoginTest')
-data.setCell(0, 3, 928);
+data.setCell(0, 3, 731);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'loginTest')
 data.setCell(1, 2, 'seleniumtrainingmaven.ParameterizedLoginTest')
-data.setCell(1, 3, 926);
+data.setCell(1, 3, 722);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'loginTest')
 data.setCell(2, 2, 'seleniumtrainingmaven.ParameterizedLoginTest')
-data.setCell(2, 3, 873);
+data.setCell(2, 3, 675);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -295,28 +298,28 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginTest(tomsmith, SuperSecretPassword!, true)</span>
-                <span class="method-start">4550 ms</span>
+                <span class="method-name">loginTest(tomsmith, InvalidPassword!, false, safari)</span>
+                <span class="method-start">6393 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">loginTest(invaliduser, SuperSecretPasswor, false)</span>
-                <span class="method-start">4660 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">loginTest(tomsmith, InvalidPassword!, false)</span>
-                <span class="method-start">4700 ms</span>
+                <span class="method-name">loginTest(invaliduser, SuperSecretPasswor, false, chrome)</span>
+                <span class="method-start">6977 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">5426 ms</span>
+                <span class="method-start">7118 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">loginTest(tomsmith, SuperSecretPassword!, true, chrome)</span>
+                <span class="method-start">7130 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">7709 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">5587 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">5629 ms</span>
+                <span class="method-start">7806 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

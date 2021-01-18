@@ -1,7 +1,10 @@
 package seleniumtrainingmaven;
 
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -13,14 +16,18 @@ public class BaseTest
 	WebDriver driver;
 	LoginPage loginPage;
 	SecurePage securePage;
-	
+	String browser = "chrome";
 	String validUsername = "tomsmith";
 	String validPassword = "SuperSecretPassword!";
 	
 	@BeforeMethod
 	public void setup()
 	{
-		driver = new ChromeDriver();
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setBrowserName(browser);
+		capabilities.setPlatform(Platform.MAC);
+		
+		driver = new RemoteWebDriver(capabilities);
 		loginPage = new LoginPage(driver);
 		securePage = new SecurePage(driver);
 		

@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumtrainingmaven.ParameterizedLoginTest">
+      <class name="seleniumtrainingmaven.RefactoredLoginTest">
         <methods>
+          <include name="successfulLogin"/>
+          <include name="failedLogin"/>
           <include name="teardown"/>
+          <include name="failedLoginWithInvalidUsername"/>
           <include name="setup"/>
-          <include name="loginTest"/>
         </methods>
-      </class> <!-- seleniumtrainingmaven.ParameterizedLoginTest -->
+      </class> <!-- seleniumtrainingmaven.RefactoredLoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
