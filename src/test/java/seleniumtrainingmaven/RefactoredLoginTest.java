@@ -2,9 +2,6 @@ package seleniumtrainingmaven;
 
 import org.testng.annotations.Test;
 
-import theinternet.pages.LoginPage;
-import theinternet.pages.SecurePage;
-
 import static org.assertj.core.api.Assertions.*;
 
 public class RefactoredLoginTest extends BaseTest

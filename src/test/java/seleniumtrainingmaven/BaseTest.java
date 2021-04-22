@@ -1,6 +1,5 @@
 package seleniumtrainingmaven;
 
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -11,11 +10,13 @@ import org.testng.annotations.BeforeMethod;
 import theinternet.pages.LoginPage;
 import theinternet.pages.SecurePage;
 
-public class BaseTest
+public abstract class BaseTest
 {
 	WebDriver driver;
+	
 	LoginPage loginPage;
 	SecurePage securePage;
+	
 	String browser = "chrome";
 	String validUsername = "tomsmith";
 	String validPassword = "SuperSecretPassword!";
@@ -37,7 +38,7 @@ public class BaseTest
 	@AfterMethod
 	public void teardown() throws InterruptedException
 	{
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.quit();
 	}
 }

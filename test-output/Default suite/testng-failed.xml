@@ -6,9 +6,7 @@
       <class name="seleniumtrainingmaven.RefactoredLoginTest">
         <methods>
           <include name="successfulLogin"/>
-          <include name="failedLogin"/>
           <include name="teardown"/>
-          <include name="failedLoginWithInvalidUsername"/>
           <include name="setup"/>
         </methods>
       </class> <!-- seleniumtrainingmaven.RefactoredLoginTest -->
